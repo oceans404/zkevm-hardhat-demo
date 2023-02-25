@@ -43,9 +43,9 @@ npx hardhat run scripts/deploy.js
 
 ## Deploy to the Polygon zkEVM Testnet
 
-Before you deploy to the Polygon zkEVM Testnet, you need zkEVM Testnet ETH. Watch my [bridging video](https://www.youtube.com/watch?v=eYZAPkTCgwg&t=330s) to learn how to bridge Goerli ETH to Polygon zkEVM Testnet ETH.
+Before you deploy to the Polygon zkEVM Testnet, you need zkEVM Testnet ETH. Watch my [bridging video](https://www.youtube.com/watch?v=eYZAPkTCgwg) to learn how to bridge Goerli ETH to Polygon zkEVM Testnet ETH.
 
-If you already have Goerli ETH in your account, start the video [here](https://youtu.be/eYZAPkTCgwg?t=183).
+If you already have Goerli ETH in your account, start the video [here](https://youtu.be/eYZAPkTCgwg?t=179).
 
 Once you've funded your account with testnet ETH, run
 
