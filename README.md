@@ -1,5 +1,11 @@
 # Deploy a smart contract to Polygon zkEVM Testnet with Hardhat and verify the contract
 
+by [Steph](https://github.com/oceans404) aka [0ceans404](https://twitter.com/0ceans404) on Twitter
+
+[Polygon zkEVM](https://wiki.polygon.technology/docs/zkEVM/introduction) is the first zero-knowledge scaling solution that is fully equivalent to an EVM. All existing smart contracts, developer toolings and wallets work seamlessly. Polygon zkEVM harnesses the power of zero-knowledge proofs in order to reduce transaction costs and massively increase throughput, all while inheriting the security of Ethereum.
+
+Here's how to deploy the smart contract in this repo to the Polygon zkEVM Testnet with Hardhat.
+
 ## Getting Started
 
 Clone the repo and install dependencies
@@ -24,7 +30,7 @@ The base of this project is the [default Hardhat Project Lock contract](https://
 - unlockTime: 3 minutes
 - include testnet explorer link in deployment console log statement
 
-Default hardhat tasks:
+Optionally run default hardhat tasks for local development:
 
 ```shell
 npx hardhat help
