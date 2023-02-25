@@ -4,13 +4,14 @@ by [Steph](https://github.com/oceans404) aka [0ceans404](https://twitter.com/0ce
 
 [Polygon zkEVM](https://wiki.polygon.technology/docs/zkEVM/introduction) is the first zero-knowledge scaling solution that is fully equivalent to an EVM. All existing smart contracts, developer toolings and wallets work seamlessly. Polygon zkEVM harnesses the power of zero-knowledge proofs in order to reduce transaction costs and massively increase throughput, all while inheriting the security of Ethereum.
 
-Here's how to deploy the smart contract in this repo to the Polygon zkEVM Testnet with Hardhat.
+Here's how to deploy the smart contract in this repo to the Polygon zkEVM Testnet with Hardhat. If you're trying to deploy an existing repo, check out my [hardhat.config.js file](https://github.com/oceans404/zkevm-hardhat-demo/blob/main/hardhat.config.js) then follow this repo's [Deploy steps starting here](hardhat.config.js)
 
 ## Getting Started
 
-Clone the repo and install dependencies
+⭐️ Star this repo, then clone it and install dependencies
 
 ```shell
+git clone https://github.com/oceans404/zkevm-hardhat-demo
 npm i
 ```
 
@@ -54,6 +55,14 @@ npx hardhat run scripts/deploy.js --network zkEVM
 
 My result was 
 
+```shell
+Lock with .0007 ETH and unlock timestamp 1677340384 
+    
+    Deployed to https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D
+```
+
+Contract: https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D
+
 ## Verify your Polygon zkEVM Testnet contract
 
 As of today, there are no Polygon zkEVM Testnet explorer API keys, so you have to verify contracts manually.
@@ -87,22 +96,20 @@ input value. We console logged this timestamp in deploy.js and it was 1677340384
 
 13. Click "Verify and Publish." The form will be in loading state. I opened the contract in a new tab and after about 5m I saw a green check mark next to the "Code" tab for verified even though the Loader never updated on the UI.
 
-// Verified contact
-https://explorer.public.zkevm-test.net/address/0xDd051E843c5603AB168B4F55F385e40AD561eff6/contracts#address-tabs
+[Here's my verified contact](https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D/contracts#address-tabs)
 
 
 ## Read unlock time
 
-Go to the "Read Contract" tab
-
-https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D/read-contract#address-tabs
+Go to the "Read Contract" tab. [Here's mine](https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D/read-contract#address-tabs)
 
 ## Withdraw locked funds
 
-Before you withdraw funds you'll need to add the Polygon zkEVM Testnet as a Network within MetaMask. Watch my [video](https://www.youtube.com/watch?v=Y1gOkTsXgSY) to learn how to add the Polygon zkEVM Testnet to MetaMask in less than 2 minutes.
+Before you withdraw funds you'll need to add the Polygon zkEVM Testnet as a Network within MetaMask so you can connect your account. Watch my [video](https://www.youtube.com/watch?v=Y1gOkTsXgSY) to learn how to add the Polygon zkEVM Testnet to MetaMask in less than 2 minutes.
 
-Go to your "Write Contract tab"
+Go to your "Write Contract" tab. [Here's mine](
+https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D/write-contract#address-tabs)
 
-https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D/write-contract#address-tabs
+Click "write" next to the withdraw function. You will have to connect to Polygon zkEVM testnet with the same account you used to deploy your smart contract. (The account whose private key you grabbed for the .env file). 
 
-Click "write" next to the withdraw function. You will have to connect to Polygon zkEVM testnet with the same account you used to deploy your smart contract.
+If you look at my [transactions tab](https://explorer.public.zkevm-test.net/address/0xc97d80F068c7Ef0fBBE05eBECD8500427F319b7D/transactions#address-tabs) you can see I was able to successfully withdraw the funds I locked while deploying the contract.
