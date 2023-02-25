@@ -4,7 +4,7 @@ by [Steph](https://github.com/oceans404) aka [0ceans404](https://twitter.com/0ce
 
 [Polygon zkEVM](https://wiki.polygon.technology/docs/zkEVM/introduction) is the first zero-knowledge scaling solution that is fully equivalent to an EVM. All existing smart contracts, developer toolings and wallets work seamlessly. Polygon zkEVM harnesses the power of zero-knowledge proofs in order to reduce transaction costs and massively increase throughput, all while inheriting the security of Ethereum.
 
-Here's how to deploy the smart contract in this repo to the Polygon zkEVM Testnet with Hardhat. If you're trying to deploy an existing repo, check out my [hardhat.config.js file](https://github.com/oceans404/zkevm-hardhat-demo/blob/main/hardhat.config.js) then follow this repo's [Deploy steps starting here](hardhat.config.js)
+Here's how to deploy the smart contract in this repo to the Polygon zkEVM Testnet with Hardhat. If you're trying to deploy an existing repo, check out my [hardhat.config.js file](hardhat.config.js) then follow this repo's [Deploy steps starting here](https://github.com/oceans404/zkevm-hardhat-demo#deploy-to-the-polygon-zkevm-testnet)
 
 ## Getting Started
 
@@ -79,7 +79,7 @@ As of today, there are no Polygon zkEVM Testnet explorer API keys, so you have t
 
 `pragma solidity ^0.8.9;` => v0.8.9+commit.e5eed63a
 
-6. In your local repo folder, navigate to the file in the build-info folder. artifacts > build-info > superlongnumberfile.json. Save this file to format with prettier. Then find the input JSON object. It will look [something like this](https://docs.soliditylang.org/en/latest/using-the-compiler.html#input-description) `"input": {}`. Copy the input object value into a new file. Name and save this file anywhere. Mine is example-standard-input.json in the root folder so you can see the format.
+6. In your local repo folder, navigate to the file in the build-info folder. artifacts > build-info > {superlongnumberfile}.json. Save this file to parse it with [Prettier](https://prettier.io/). Then find the input JSON object. It will look [something like this](https://docs.soliditylang.org/en/latest/using-the-compiler.html#input-description) `"input": {}`. Copy the input object value into a new file. Name and save this file locally. I saved mine as [example-standard-input.json](example-standard-input.json) in the root folder so you can check out the format, but use your own file.
 
 7. Upload this file in the drag and drop "Standard Input JSON" file field.
 
@@ -87,7 +87,7 @@ As of today, there are no Polygon zkEVM Testnet explorer API keys, so you have t
 
 9. To add your ABI-encoded instrctor arguments, open the [Online ABI Encoder](https://abi.hashex.org/) and choose the auto-parse tab. 
 
-10. In your local repo folder, navigate to the file in the build-info folder. artifacts > build-info > superlongnumberfile.json. Find your ABI json array `"abi": []`, and copy/paste the array value into the auto-parse text box. Click "Parse."
+10. In your local repo folder, navigate to the file in the build-info folder. artifacts > build-info > {superlongnumberfile}.json. Find your ABI json array `"abi": []`, and copy/paste the array value into the auto-parse text box. Click "Parse."
 
 11. You'll see any inputs appear below. We need to specify the _unlockTime
 input value. We console logged this timestamp in deploy.js and it was 1677340384. Paste it in and you'll see the Encoded Data generated below.
