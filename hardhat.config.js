@@ -6,7 +6,8 @@ module.exports = {
   solidity: "0.8.9",
   networks: {
     zkEVM: {
-      url: `https://rpc.public.zkevm-test.net`,
+      chainId: 1442,
+      url: 'https://rpc.public.zkevm-test.net',
       accounts: [process.env.ACCOUNT_PRIVATE_KEY],
     },
   },
